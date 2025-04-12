@@ -36,7 +36,7 @@
                 Đừng Lo! Chúng tôi có giải pháp cho bạn ngay lúc này!
             </p>
             
-            <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-8 text-left">
+<!--             <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-8 text-left">
                 <div class="flex">
                     <div class="flex-shrink-0 text-green-500">
                         <i class="fas fa-check-circle text-xl"></i>
@@ -47,47 +47,12 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <button onclick="window.location.href='#dangky'" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
-                Đăng Ký Ngay
-            </button>
-
-            <p class="text-xs text-gray-500 mt-4">
-                *Lãi suất ưu đãi áp dụng có điều kiện
-            </p>
+                <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424"
+                   class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105"
+                   target="_blank"> Đăng Ký Ngay
+                </a>
         </div>
     </div>
-
-    <!-- Simple Modal (hidden by default) -->
-    <div id="dangky" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-bold mb-4">Đăng ký nhận tư vấn</h3>
-            <form class="space-y-4">
-                <div>
-                    <input type="text" placeholder="Họ và tên" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-                </div>
-                <div>
-                    <input type="tel" placeholder="Số điện thoại" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-                </div>
-                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                    Gửi Yêu Cầu
-                </button>
-            </form>
-            <button onclick="document.getElementById('dangky').classList.add('hidden')" class="mt-4 text-gray-500 hover:text-gray-700">
-                <i class="fas fa-times"></i> Đóng
-            </button>
-        </div>
-    </div>
-
-    <script>
-        // Show modal when button is clicked
-        document.querySelector('button[onclick*="dangky"]').addEventListener('click', function(e) {
-            if(this.getAttribute('onclick').includes('location.href')) {
-                e.preventDefault();
-                document.getElementById('dangky').classList.remove('hidden');
-            }
-        });
-    </script>
-
 </body></html>
