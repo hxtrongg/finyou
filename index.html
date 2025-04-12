@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
+<!DOCTYPE html><html lang="vi"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tư vấn miễn phí | Không Cần Nhờ Bạn Bè</title>
+    <title>Giải Pháp Vay Tiền Nhanh | Không Cần Nhờ Bạn Bè</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,23 +16,14 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <div class="fixed top-0 left-0 right-0 bg-orange-500 text-white text-center py-2">
-        <p class="text-sm">Giới hạn thời gian trong hôm nay!</p>
-        <div id="countdown" class="mx-auto w-fit bg-orange-400 rounded-full px-4 py-2 text-lg font-bold">
-            Loading...
-        </div>
-    </div>
-
-   
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center h-full">
+        <!-- Image Section -->
         <div class="md:w-1/2 flex justify-center items-center p-4">
-
-                <div class="relative max-w-md">
-                    <div class="absolute top-0 left-0 bg-white bg-opacity-75 p-2 rounded-md z-10">
-                        <h1 class="text-2xl md:text-3xl font-bold text-red-800">
+            <div class="relative max-w-md">
+                <h1 class="text-2xl md:text-3xl font-bold text-red-800">
                             "Nhiều khi cần<br>mà bạn bè nó <br>khó"
                         </h1>
-                    </div>
-                    <img src="https://w.ladicdn.com/s750x750/639c7a07ef42240012d8b579/thiet-ke-chua-co-ten-20250313140756-bo0td.png"
+                 <img src="https://w.ladicdn.com/s750x750/639c7a07ef42240012d8b579/thiet-ke-chua-co-ten-20250313140756-bo0td.png"
                          alt="Người đang khó xử khi vay tiền"
                          class="rounded-lg shadow-xl w-full">
                     <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
@@ -43,82 +32,38 @@
                         <span class="text-4xl font-bold text-green-600"> 1,67% </span>
 <!--                         <div  class="text-2xl font-bold text-green-600">1,67% </div> -->
                     </div>
-                </div>
-            </div>
-        
+        </div>
 
+        <!-- Content Section -->
         <div class="md:w-1/2 p-6 md:p-10 text-center md:text-left">
-
             <p class="text-xl text-gray-600 mb-6">
                 Đừng Lo! Chúng tôi có giải pháp cho bạn ngay lúc này!
             </p>
-
+            
             <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-8 text-left">
                 <div class="flex">
                     <div class="flex-shrink-0 text-green-500">
                         <i class="fas fa-check-circle text-xl"></i>
                     </div>
                     <div class="ml-3">
-                        <p class="text-sm text-green-700">
+                         <p class="text-sm text-green-700">
                             chủ động tài chính với các <span class="font-bold">PHƯƠNG ÁN HỖ TRỢ LINH HOẠT</span>
                         </p>
                     </div>
                 </div>
             </div>
 
-           <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424"
-   class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105"
-   target="_blank"> Đăng Ký Ngay
-</a>
+             <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424"
+               class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105"
+               target="_blank"> Đăng Ký Ngay
+            </a>
 
-</div>
+           
+        </div>
     </div>
 
-    <script>
-        // Show modal when button is clicked
-        const registerButton = document.querySelector('button[onclick*="dangky"]');
-        if (registerButton) {
-            registerButton.addEventListener('click', function(e) {
-                if(this.getAttribute('onclick').includes('location.href')) {
-                    e.preventDefault();
-                    const modal = document.getElementById('dangky');
-                    if (modal) {
-                        modal.classList.remove('hidden');
-                    }
-                }
-            });
-        }
+   
 
-        function updateCountdown() {
-            const now = new Date();
-            const endOfDay = new Date(now);
-            endOfDay.setHours(23, 59, 59, 999);
+   
 
-            // Calculate the difference in milliseconds
-            let diff = endOfDay.getTime() - now.getTime();
-
-            // If the remaining time is more than 12 hours, set the target to 12 hours from now
-            const twelveHoursInMillis = 12 * 60 * 60 * 1000;
-            if (diff > twelveHoursInMillis) {
-                diff = twelveHoursInMillis;
-            }
-
-            if (diff <= 0) {
-                document.getElementById('countdown').textContent = "Đã hết thời gian!";
-                clearInterval(intervalId); // Stop the interval when time is up
-                return;
-            }
-
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-        }
-
-        // Update the countdown every second
-        updateCountdown(); // Initial call to avoid delay
-        const intervalId = setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
+</body></html>
