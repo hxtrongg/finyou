@@ -5,50 +5,50 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        html, body {
-            height: 100%;
-            overflow: hidden;
+        @media (min-width: 1024px) {
+            html, body {
+                height: 100%;
+                overflow: hidden;
+            }
         }
         .container {
-            height: 100vh;
-            max-height: 100vh;
+            min-height: 100vh;
         }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center h-full">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center py-10 lg:py-0">
         <!-- Content Section -->
-        <div class="md:w-1/2 p-6 md:p-10 text-center md:text-left">
-            <h1 class="text-3xl md:text-5xl font-bold text-red-800 mb-4 leading-tight">
+        <div class="lg:w-1/2 p-6 lg:p-10 text-center lg:text-left order-2 lg:order-1">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
                 "Nhiều khi cần gấp mà bạn bè nó khó"
             </h1>
-            <h2 class="text-2xl md:text-3xl font-bold text-green-600 mb-6">
-                Đừng Lo! Có Giải Pháp Ở Đây!
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-6">
+                Vay Nhanh Đến 90 Triệu
             </h2>
             
             <div class="mb-8">
-<!--                 <p class="text-xl text-gray-700 mb-2">Vay Nhanh Đến <span class="font-bold">90 Triệu</span></p> -->
                 <div class="bg-yellow-100 p-3 rounded-lg inline-block">
-                    <div class="flex items-center">
-                        <span class="text-sm mr-2">Ưu đãi thấp vô địch!</span>
-                        <span class="text-sm text-3xl text-red-400">Hàng tháng</span>
-                        <span class="text-3xl font-bold text-green-600 mx-1">1.67</span>
-                        <span class="text-sm">%</span>
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <span class="text-sm sm:mr-2">Ưu đãi thấp vô địch!</span>
+                        <div class="flex items-center">
+                            <span class="text-sm">Hàng tháng</span>
+                            <span class="text-2xl sm:text-3xl font-bold text-green-600 mx-1">1.67</span>
+                            <span class="text-sm">%</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
+            <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl shadow-lg transition duration-300 transform hover:scale-105">
+                Đăng Ký Nhanh <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
 
         <!-- Image Section -->
-        <div class="md:w-1/2 flex justify-center items-center p-4">
+        <div class="lg:w-1/2 flex justify-center items-center p-4 order-1 lg:order-2 mb-8 lg:mb-0">
             <img src="https://w.ladicdn.com/s750x750/639c7a07ef42240012d8b579/thiet-ke-chua-co-ten-20250313140756-bo0td.png" alt="Người đang khó xử khi vay tiền" class="rounded-lg shadow-xl w-full max-w-md">
-        <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300 transform hover:scale-105">
-                Đăng Ký Nhanh
-            </a>
         </div>
-      
     </div>
 
 </body></html>
