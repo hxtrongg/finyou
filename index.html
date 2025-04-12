@@ -20,22 +20,18 @@
         <!-- Image Section -->
         <div class="md:w-1/2 flex justify-center items-center p-4">
             <div class="relative max-w-md">
-                <h1 class="text-2xl md:text-3xl font-bold text-red-800">
-                            "Nhiều khi cần<br>mà bạn bè nó <br>khó"
-                        </h1>
-                 <img src="https://w.ladicdn.com/s750x750/639c7a07ef42240012d8b579/thiet-ke-chua-co-ten-20250313140756-bo0td.png"
-                         alt="Người đang khó xử khi vay tiền"
-                         class="rounded-lg shadow-xl w-full">
-                    <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
-                        <span class="text-4xl font-bold text-green-800> Ưu đãi thấp vô địch! </span> <br>
-                        <span class="text-2xl font-bold text-red-600"> Hàng tháng </span>
-                        <span class="text-4xl font-bold text-green-600"> 1,67% </span>
-<!--                         <div  class="text-2xl font-bold text-green-600">1,67% </div> -->
-                    </div>
+                <img src="https://w.ladicdn.com/s750x750/639c7a07ef42240012d8b579/thiet-ke-chua-co-ten-20250313140756-bo0td.png" alt="Người đang khó xử khi vay tiền" class="rounded-lg shadow-xl w-full">
+                <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
+                    <div class="text-2xl font-bold text-green-600">1,67%<span class="text-sm">/tháng*</span></div>
+                </div>
+            </div>
         </div>
 
         <!-- Content Section -->
         <div class="md:w-1/2 p-6 md:p-10 text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                "Nhiều khi cần mà bạn bè nó khó"
+            </h1>
             <p class="text-xl text-gray-600 mb-6">
                 Đừng Lo! Chúng tôi có giải pháp cho bạn ngay lúc này!
             </p>
@@ -46,24 +42,52 @@
                         <i class="fas fa-check-circle text-xl"></i>
                     </div>
                     <div class="ml-3">
-                         <p class="text-sm text-green-700">
-                            chủ động tài chính với các <span class="font-bold">PHƯƠNG ÁN HỖ TRỢ LINH HOẠT</span>
+                        <p class="text-sm text-green-700">
+                            Vay nhanh đến <span class="font-bold">90 triệu</span> - Giải ngân <span class="font-bold">siêu tốc</span> trong 24h
                         </p>
                     </div>
                 </div>
             </div>
 
-             <a href="https://pmrevo.com/ql?pm_cid=33606c086c67469aa424"
-               class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105"
-               target="_blank"> Đăng Ký Ngay
-            </a>
+            <button onclick="window.location.href='#dangky'" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
+                Đăng Ký Ngay
+            </button>
 
-           
+            <p class="text-xs text-gray-500 mt-4">
+                *Lãi suất ưu đãi áp dụng có điều kiện
+            </p>
         </div>
     </div>
 
-   
+    <!-- Simple Modal (hidden by default) -->
+    <div id="dangky" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold mb-4">Đăng ký nhận tư vấn</h3>
+            <form class="space-y-4">
+                <div>
+                    <input type="text" placeholder="Họ và tên" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <input type="tel" placeholder="Số điện thoại" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                    Gửi Yêu Cầu
+                </button>
+            </form>
+            <button onclick="document.getElementById('dangky').classList.add('hidden')" class="mt-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i> Đóng
+            </button>
+        </div>
+    </div>
 
-   
+    <script>
+        // Show modal when button is clicked
+        document.querySelector('button[onclick*="dangky"]').addEventListener('click', function(e) {
+            if(this.getAttribute('onclick').includes('location.href')) {
+                e.preventDefault();
+                document.getElementById('dangky').classList.remove('hidden');
+            }
+        });
+    </script>
 
 </body></html>
